@@ -14,6 +14,9 @@ li{
 section{
     background-color: rgb (245, 245, 245)
 }
+a{
+    text-decoration: none;
+}
 /* 
 
 LANDING PAGE
@@ -31,6 +34,40 @@ LANDING PAGE
     width: 100%;
     max-width: 1000px;
 }
+.header__para{
+    font: size 24px;
+    line-height: 2;
+    max-width: 450px;
+}
+
+.title{
+    font-size: 120px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+}
+.title--secondary, .rose-gold{
+    color:#C97C83
+}
+p{
+    line-height: 1.5;
+    font-size: 16px;
+
+}
+.social__list{
+    margin-top: 16px;
+}
+.social__link{
+    background-color: #C97C83;
+    color: white;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+
+}
+
+
 /* 
 
 NAVIGATION
@@ -57,7 +94,6 @@ nav{
     margin: 0 12px;
 }
 .nav__link--anchor{
-    text-decoration: none;
     font-size: 16px;
     color: #242424;
     font-weight: 700;
@@ -65,4 +101,5 @@ nav{
 .fa-solid{
     font-size: 20px;
 }
+
 
