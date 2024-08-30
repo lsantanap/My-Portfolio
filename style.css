@@ -26,6 +26,9 @@ a{
 .clic:active{
     transform:scale(0.8)
 }
+button{
+    cursor: pointer;
+}
 /* 
 
 LANDING PAGE
@@ -84,6 +87,19 @@ p{
     
 
 }
+.mail__btn{
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+    color: white;
+    position: absolute;
+    bottom: 32px; 
+    right: 32px;
+}
+
 
 
 /* 
