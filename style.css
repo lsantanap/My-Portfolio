@@ -15,6 +15,7 @@ section {
 }
 .container {
   padding: 50px 0;
+  width: 100%;
 }
 .row {
   width: 100%;
@@ -31,7 +32,7 @@ a {
 .click:hover {
   transform: scale(1.1);
 }
-.clic:active {
+.click:active {
   transform: scale(0.8);
 }
 button {
@@ -40,6 +41,30 @@ button {
 .fa-solid {
   font-size: 20px;
 }
+
+.link__hover-effect {
+  position: relative;
+}
+.link__hover-effect::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  right: 0;
+  width: 0;
+  transition: all 300ms ease;
+}
+.link__hover-effect:hover:after {
+  left: 0;
+  width: 100%;
+}
+.link__hover-effect--white:after {
+  background-color: white;
+}
+.link__hover-effect--black:after {
+  background-color: black;
+}
+
 /* 
 
 LANDING PAGE
@@ -159,6 +184,7 @@ nav {
 }
 .nav__link--list {
   display: flex;
+  align-items: center;
 }
 #personal-logo {
   filter: invert(1);
@@ -166,13 +192,51 @@ nav {
   width: 50px;
 }
 .nav__link {
-  margin: 0 12px;
+  margin: 0;
 }
 .nav__link--anchor {
   font-size: 16px;
   color: #242424;
   font-weight: 700;
+  margin: 16px;
 }
+/* 
+
+MODAL
+
+ */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1100px;
+  height: 80%;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+.modal__half {
+  width: 50%;
+  padding: 40px 72px;
+}
+.modal__about {
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  flex-direction: column;
+}
+.modal__languages{
+  display: flex;
+  
+}
+
+.modal__contact {
+  background-color: #242424;
+  color: white;
+}
+
 /* 
 
 PROJECTS
@@ -185,6 +249,7 @@ PROJECTS
 }
 .project__img {
   width: 100%;
+  transition: all 600ms ease;
 }
 .project__wrapper {
   position: relative;
@@ -212,7 +277,6 @@ PROJECTS
   transition: opacity 300ms, transform 450ms ease;
 }
 .project__wrapper:hover .project__wrapper--bg {
-  
   opacity: 0.7;
 }
 .project__wrapper--bg {
@@ -240,4 +304,31 @@ PROJECTS
 
 .project__description--para {
   margin: 16px 0;
+}
+/* 
+FOOTER
+ */
+footer {
+  background-color: #242424;
+  display: flex;
+  padding: 6% 0;
+}
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__logo--img {
+  width: 70px;
+}
+.footer__social--list {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin: 28px 0;
+}
+.footer__social--link,
+.footer__copyright {
+  color: white;
 }
