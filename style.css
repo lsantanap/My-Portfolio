@@ -58,6 +58,7 @@ a {
   text-decoration: none;
 }
 .click {
+  cursor: pointer;
   transition: all 300ms ease;
 }
 .click:hover {
@@ -326,8 +327,7 @@ MODAL
   border-color: #c97c83;
   color: #c97c83;
 }
-.modal__overlay--loading {
-  background-color: black;
+.modal__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -336,19 +336,43 @@ MODAL
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: -1;
 }
-.fa-spinner{
+
+.modal__overlay--loading {
+  background-color: black;
+  font-size: 80px;
+}
+.modal__overlay--success {
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+}
+.modal__overlay--visible{
+  z-index: 1;
+}
+.fa-spinner {
   font-size: 80px;
   animation: spinner 750ms infinite linear;
 }
 @keyframes spinner {
- 0%{
-transform: rotate(0);
- } 
- 100%{
-  transform: rotate(360deg);
- }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.modal__exit{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 36px;
+  z-index: 100;
 }
 
 /* 

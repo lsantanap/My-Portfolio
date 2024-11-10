@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leslie Santana</title>
     <link rel="stylesheet" href="style.css" />
+
     <script
       src="https://kit.fontawesome.com/d781a64b62.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+   <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "VMDuKIoekIuKGcEZV",
+      });
+   })();
+    </script>
   </head>
   <body>
     <section id="landing-page">
@@ -144,7 +156,7 @@
           <h3 class="modal__subtitle modal__subtitle--contact">
             I'd Love to Hear from You
           </h3>
-          <form id="contact__form" action="">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
               <input class="input" name="user_name" type="text" required></input>
@@ -163,9 +175,10 @@
             <i class="fa-solid fa-spinner"></i>
           </div>
           <div class="modal__overlay modal__overlay--success">
-            Thank you for the message. I look forward to speaking with you 
+            Thank you for the message. I look forward to speaking to you :)
           </div>
         </div>
+        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
