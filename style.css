@@ -44,6 +44,7 @@ input:focus,
 textarea:focus {
   border-color: #c97c83;
 }
+
 .container {
   padding: 50px 0;
   width: 100%;
@@ -245,10 +246,17 @@ MODAL
   width: 90%;
   max-width: 1100px;
   height: 80%;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+.modal--open .modal{
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  visibility: visible;
 }
 .modal__half {
   width: 50%;
