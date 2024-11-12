@@ -12,6 +12,7 @@ li {
 }
 section {
   background-color: rgb (245, 245, 245);
+  transition: all 300ms ease;
 }
 input,
 textarea {
@@ -111,7 +112,32 @@ nav,
   visibility: hidden;
   transition: all 400ms 200ms;
 }
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__subtitle,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para {
+  color: white;
+}
+.dark-theme section {
+  background-color: #242424;
+}
+.dark-theme #personal-logo{
+  filter: none;
+}
+.dark-theme .scroll__icon{
+  color: white;
+}
+.dark-theme .scroll__icon::after,
+.dark-theme .link__hover-effect--black:after{
+  background-color: white;
+}
 
+.dark-theme .mail__btn{
+  background-color: white;
+  color: #242424;
+}
 
 /* 
 
@@ -143,7 +169,13 @@ LANDING PAGE
   text-align: left;
   line-height: 1;
 }
-.title--secondary,
+
+.title--secondary {
+  font-size: 120px;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
+}
 .rose-gold {
   color: #c97c83;
 }
@@ -268,9 +300,9 @@ MODAL
   visibility: hidden;
   opacity: 0;
   z-index: -1;
-  transition: visibility 0.5s ease,opacity 0.2s ease, box-shadow 0.5s ease;
+  transition: visibility 0.5s ease, opacity 0.2s ease, box-shadow 0.5s ease;
 }
-.modal--open .modal{
+.modal--open .modal {
   z-index: 60;
   opacity: 1;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
@@ -286,8 +318,7 @@ MODAL
   transition: all 300ms ease;
 }
 .modal--open .modal__about,
-.modal--open .modal__contact
-{
+.modal--open .modal__contact {
   transform: translateX(0%);
 }
 .modal__about {
@@ -326,7 +357,7 @@ MODAL
 .modal__contact {
   background-color: #242424;
   color: white;
-  transform:translateX(110%);
+  transform: translateX(110%);
 }
 .modal__title {
   font-size: 26px;
@@ -385,7 +416,7 @@ MODAL
   text-align: center;
   padding: 28px;
 }
-.modal__overlay--visible{
+.modal__overlay--visible {
   z-index: 1;
   display: flex;
 }
@@ -401,7 +432,7 @@ MODAL
     transform: rotate(360deg);
   }
 }
-.modal__exit{
+.modal__exit {
   position: absolute;
   top: 30px;
   right: 40px;

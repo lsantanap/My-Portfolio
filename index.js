@@ -1,6 +1,20 @@
 // template_m4vz0j2
 // leslieamanda0504
 // VMDuKIoekIuKGcEZV
+let isModalOpen=false;
+let contrastToggle=false;
+function toggleContrast(){
+  
+  contrastToggle = !contrastToggle;
+  if (contrastToggle){
+    document.body.classList.add('dark-theme')
+
+  }
+  else {
+    document.body.classList.remove('dark-theme')
+  }
+  
+}
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -27,7 +41,7 @@ function contact(event) {
     console.log("it worked 1");
   }, 1000);
 }
-let isModalOpen=false;
+
 function toggleModal(){
     
     if (isModalOpen){
