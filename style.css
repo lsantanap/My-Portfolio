@@ -97,6 +97,21 @@ button {
 .link__hover-effect--black:after {
   background-color: black;
 }
+nav,
+.scroll,
+.header {
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 800ms;
+}
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms 200ms;
+}
+
 
 /* 
 
@@ -164,6 +179,7 @@ p {
   position: absolute;
   bottom: 32px;
   right: 32px;
+  z-index: 80;
 }
 .fa-envelope {
   font-size: 28px;
@@ -267,9 +283,16 @@ MODAL
   flex-direction: column;
   justify-content: center;
   position: relative;
+  transition: all 300ms ease;
+}
+.modal--open .modal__about,
+.modal--open .modal__contact
+{
+  transform: translateX(0%);
 }
 .modal__about {
   background-color: rgb(245, 245, 245);
+  transform: translateX(-110%);
 }
 .modal__languages {
   display: flex;
@@ -303,6 +326,7 @@ MODAL
 .modal__contact {
   background-color: #242424;
   color: white;
+  transform:translateX(110%);
 }
 .modal__title {
   font-size: 26px;
@@ -343,7 +367,7 @@ MODAL
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   justify-content: center;
@@ -363,6 +387,7 @@ MODAL
 }
 .modal__overlay--visible{
   z-index: 1;
+  display: flex;
 }
 .fa-spinner {
   font-size: 80px;
