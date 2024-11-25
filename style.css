@@ -513,6 +513,7 @@ PROJECTS
 FOOTER
  */
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0;
@@ -546,28 +547,28 @@ SHAPES
   position:fixed
  }
  .shape--0{
-  top: 15vh;
-  left: 5vh;
+  top: 30vh;
+  left: 45vh;
  }
  .shape--1{
   top: 15vh;
-  left: 50vh;
+  left: 80vh;
  }
  .shape--2{
   top: 35vh;
-  left: 80vh;
+  left: 130vh;
  }
  .shape--3{
   top: 50vh;
   left: 5vh;
  }
  .shape--4{
-  top: 50vh;
-  left: 50vh;
+  top: 60vh;
+  left: 120vh;
  }
  .shape--5{
   top: 50vh;
-  left: 80vh;
+  left: 100vh;
  }
  .shape--6{
   top: 80vh;
@@ -579,5 +580,42 @@ SHAPES
  }
  .shape--8{
   top: 80vh;
-  left: 90vh;
+  left: 140vh;
+ }
+
+/* Small phones, tablest, large smart phones */
+
+ @media (max-width: 768px) {
+  .title{
+    font-size: 80px;
+  }
+  .header__para{
+    font-size: 20px;
+  }
+  .modal{
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+  .modal__half{
+    width: 100%;
+
+  }
+ }
+ 
+ /* Small phones */
+ @media (max-width: 480px){
+  .title{
+    font-size: 52px;
+  }
+  .header__para{
+    font-size: 18px;
+  }
+  .nav__link:first-child{
+    display: none;
+  }
  }
